@@ -6,7 +6,7 @@ before_install:
   - docker build -t yaji/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run yaji/react-test npm test -- ----coverage
+  - docker run yaji/react-test npm test -- --coverage
 
 after_success:
   - docker build -t yaji/multi-client ./client 
