@@ -9,15 +9,15 @@ script:
   - docker run -e CI=true yaji/react-test npm test
 
 after_success:
-  - docker build -t yaji/multi-client ./client 
-  - docker build -t yaji/multi-nginx ./nginx
-  - docker build -t yaji/multi-server ./server
-  - docker build -t yaji/multi-worker ./worker
+  - docker build -t yajilin/multi-client ./client 
+  - docker build -t yajilin/multi-nginx ./nginx
+  - docker build -t yajilin/multi-server ./server
+  - docker build -t yajilin/multi-worker ./worker
   #Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take those image and push them to docker hub
-  - docker push yaji/multi-client
-  - docker push yaji/multi-nginx
-  - docker push yaji/multi-server
-  - docker push yaji/multi-worker
+  - docker push yajilin/multi-client
+  - docker push yajilin/multi-nginx
+  - docker push yajilin/multi-server
+  - docker push yajilin/multi-worker
 
