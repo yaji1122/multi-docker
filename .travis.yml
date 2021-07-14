@@ -27,7 +27,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-1"
   app: "multi-docker-yaji"
-  env: "MultiDockeryaji-env"
+  env: "MultiDockeryaji-env-1"
   bucket_name: "elasticbeanstalk-ap-northeast-1-059424882084"
   bucket_path: "docker-multi"
   on:
